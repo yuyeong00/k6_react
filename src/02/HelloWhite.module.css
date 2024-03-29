@@ -1,0 +1,8 @@
+.ch1 {
+    color: rgb(60, 51, 162);
+    border-radius: 30px;
+    padding: 30px;
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+}
