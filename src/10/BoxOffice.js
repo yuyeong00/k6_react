@@ -99,6 +99,12 @@ export default function BoxOffice() {
             </tr>
         </tfoot>
       </table>
+      <div className="w-4/5 h-14 flex justify-center items-center
+                    font-bold text-center
+                     bg-slate-900 text-slate-100 text-xl">
+        누적관객수 :
+        // 개봉일 :
+      </div>
     </div>
   );
 }

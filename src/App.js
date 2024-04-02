@@ -13,9 +13,9 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 // import BoxOfficeTb from './05_1/BoxOfficeTb';
 import Lotto from './06/Lotto';
 // import FoodCard from './07/FoodCard';
-// import FoodMain from './07/FoodMain';
+import FoodMain from './07/FoodMain';
 import MyClock from './08/MyClock';
-import TrafficMain from './09/TrafficMain';
+// import TrafficMain from './09/TrafficMain';
 // import RefVal from './10/RefVal';
 // import RefInput from './10/RefInput';
 import BoxOffice from './10/BoxOffice';
@@ -24,6 +24,8 @@ import GalleryMain from './11/GalleryMain';
 import BfestMain from './11/BfestMain';
 import Frcst from './14/Frcst';
 // import RouteMain from './13/RouteMain';
+import UltraSrtFcst from './14/UltraSrtFcst';
+import VilageFcst from './14/VilageFcst';
 
 
 function App() {
@@ -39,25 +41,25 @@ function App() {
                         bg-slate-400'>
         <div className='text-2xl'>리액트 실습</div>
         <div className='flex justify-center items-center'>
-          <div className='mx-4 p-2 hover:bg-blue-800 rounded-xl'>
+          <div className='mx-4 p-2 hover:bg-gray-800 rounded-xl'>
             <Link to="/frcst">예보</Link>
           </div>
-          <div className='mx-4 p-2 hover:bg-blue-800 rounded-xl'>
+          <div className='mx-4 p-2 hover:bg-gray-800 rounded-xl'>
             <Link to="/bfest">부산축제</Link>
           </div>
-          <div className='mx-4 p-2 hover:bg-blue-800 rounded-xl'>
+          <div className='mx-4 p-2 hover:bg-gray-800 rounded-xl'>
             <Link to="/gallery">관광정보</Link>
           </div>
-          <div className='mx-4 p-2 hover:bg-blue-800 rounded-xl'>
+          <div className='mx-4 p-2 hover:bg-gray-800 rounded-xl'>
             <Link to="/boxoffice">박스오피스</Link>
           </div>
-          <div className='mx-4 p-2 hover:bg-blue-800 rounded-xl'>
+          <div className='mx-4 p-2 hover:bg-gray-800 rounded-xl'>
             <Link to="/lotto">로또</Link>
           </div>
-          <div className='mx-4 p-2 hover:bg-blue-800 rounded-xl'>
-            <Link to="/traffic">교통사고</Link>
+          <div className='mx-4 p-2 hover:bg-gray-800 rounded-xl'>
+            <Link to="/food">푸드</Link>
           </div>
-          <Link to="/"><LiaHomeSolid className='text-4xl hover:bg-blue-300'/></Link>
+          <Link to="/"><LiaHomeSolid className='text-4xl hover:text-gray-950'/></Link>
         </div>
       </header>
       
@@ -69,8 +71,10 @@ function App() {
           <Route path='/boxoffice' element={<BoxOffice/>} />
           <Route path='/bfest' element={<BfestMain/>} />
           <Route path='/gallery' element={<GalleryMain/>} />
-          <Route path='/traffic' element={<TrafficMain/>} />
           <Route path='/frcst' element={<Frcst/>} />
+          <Route path='/food' element={<FoodMain/>} />
+          <Route path='/ultra/:dt/:area/:x/:y' element={<UltraSrtFcst/>} />
+          <Route path='/vilage/:dt/:area/:x/:y' element={<VilageFcst/>} />
         </Routes>
       </main>
       
@@ -84,9 +88,5 @@ function App() {
     </BrowserRouter>
   );
 }
-
-// const App = () => {
-//   return ();
-// }
 
 export default App;
