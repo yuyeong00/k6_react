@@ -80,11 +80,11 @@ export default function BoxOffice() {
       <table className="w-4/5 border-2">
         <thead className="">
           <tr className="h-11 text-center bg-slate-900 text-white">
-            <th className="w-20">순위</th>
-            <th>영화명</th>
-            <th className="w-1/5">매출액</th>
-            <th className="w-1/5">관객수</th>
-            <th className="w-30">증감율</th>
+            <th className="w-1/12">순위</th>
+            <th className="w-3/12">영화명</th>
+            <th className="w-3/12">매출액</th>
+            <th className="w-3/12">관객수</th>
+            <th className="w-2/12">증감율</th>
           </tr>
         </thead>
         <tbody>

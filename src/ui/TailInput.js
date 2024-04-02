@@ -4,7 +4,6 @@ export default function TailInput({type, inputRef, ph, handleChange}) {
       <input type={type} 
             ref={inputRef}
             onChange={handleChange}
-            max="2024-03-24"
             id="first_name" 
             className="bg-gray-50 border 
             border-gray-300 text-gray-900 
