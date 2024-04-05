@@ -26,6 +26,7 @@ import Frcst from './14/Frcst';
 // import RouteMain from './13/RouteMain';
 import UltraSrtFcst from './14/UltraSrtFcst';
 import VilageFcst from './14/VilageFcst';
+import FrcstList from './14/FrcstList';
 
 
 function App() {
@@ -75,6 +76,7 @@ function App() {
           <Route path='/food' element={<FoodMain/>} />
           <Route path='/ultra/:dt/:area/:x/:y' element={<UltraSrtFcst/>} />
           <Route path='/vilage/:dt/:area/:x/:y' element={<VilageFcst/>} />
+          <Route path='/Flist' element={<FrcstList/>} />
         </Routes>
       </main>
       

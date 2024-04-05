@@ -30,8 +30,9 @@ export default function Frcst() {
     setY(tm[0]["격자 Y"]);
   }
 
-  //초단기예보
-  const handleUltra = () => {
+  //초단기예보 단기예보 주소값 전달하는 방식 똑같음 => 하나의 함수를 씀 
+  // => ()=>{}콜백함수형태로 소괄호 안의 매개변수로 전달하여 사용
+  const handleFrcst = (loc) => {
     if (dt === '' || dt === undefined){
       alert('날짜를 선택하세요')
       dRef.current.focus();
@@ -42,8 +43,15 @@ export default function Frcst() {
       sRef.current.focus();
       return;
     }
-    navigator(`/ultra/${dt}/${area}/${x}/${y}`);
+    // navigator(`/${loc}/${dt}/${area}/${x}/${y}`);
+
+    let gubun='';
+
+    if (loc=='ultra') gubun = '초단기예보';
+    else gubun = '단기예보';
+    navigator(`/flist?dt=${dt}&area=${area}&x=${x}&y=${y}&gubun=${gubun}`);
   }
+
 
 
 
@@ -60,11 +68,11 @@ export default function Frcst() {
       </div>
       <div>
         <TailButton caption="초단기예보" color="blue"
-                    handleClick={handleUltra}/>
+                    handleClick={() => {handleFrcst('ultra')}}/>
       </div>
       <div>
         <TailButton caption="단기예보" color="blue"
-                    handleClick={handleUltra}/>
+                    handleClick={() => {handleFrcst('vilage')}}/>
       </div>
     </div>
   )
