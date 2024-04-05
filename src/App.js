@@ -27,6 +27,8 @@ import Frcst from './14/Frcst';
 import UltraSrtFcst from './14/UltraSrtFcst';
 import VilageFcst from './14/VilageFcst';
 import FrcstList from './14/FrcstList';
+// import Recoil1_1 from './15/Recoil1_1';
+import RecoilMain from './15/RecoilMain';
 
 
 function App() {
@@ -42,6 +44,9 @@ function App() {
                         bg-slate-400'>
         <div className='text-2xl'>리액트 실습</div>
         <div className='flex justify-center items-center'>
+          <div className='mx-4 p-2 hover:bg-gray-800 rounded-xl'>
+            <Link to="/R1">Recoil</Link>
+          </div>
           <div className='mx-4 p-2 hover:bg-gray-800 rounded-xl'>
             <Link to="/frcst">예보</Link>
           </div>
@@ -77,6 +82,7 @@ function App() {
           <Route path='/ultra/:dt/:area/:x/:y' element={<UltraSrtFcst/>} />
           <Route path='/vilage/:dt/:area/:x/:y' element={<VilageFcst/>} />
           <Route path='/Flist' element={<FrcstList/>} />
+          <Route path='/r1' element={<RecoilMain />} />
         </Routes>
       </main>
       
